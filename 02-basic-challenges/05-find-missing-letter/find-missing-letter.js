@@ -20,21 +20,22 @@
 function findMissingLetter(arr) {
   // Find the char code of the first letter in the array
   let start = arr[0].charCodeAt(0);
+  console.log("start", start);
 
   // Loop through the array
   for (let i = 0; i < arr.length; i++) {
     // Find the char code of the current letter in the array
     const current = arr[i].charCodeAt(0);
     // If the difference between the current char code and the start char code is greater than 1, return the letter that is missing
-    // console.log("current", current);
+    console.log("current", current);
 
     if (current - start > 1) {
       // Convert the char code to a letter
+      // return String.fromCharCode(start + 1);
+      console.log("start", start);
+      console.log("current - start", current - start);
+      console.log("if", start + 1);
       return String.fromCharCode(start + 1);
-      //   console.log("start", start);
-      //   console.log("current - start", current - start);
-      //   console.log("if", start + 1);
-      //   return String.fromCharCode(start + 1);
     }
     start = current;
   }
