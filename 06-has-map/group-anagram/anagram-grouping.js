@@ -4,12 +4,13 @@ function anagramGrouping(words) {
   for (const word of words) {
     const sortedChars = word.split("").sort().join("");
     // console.log(word, "word");
-    console.log(sortedChars, "sort");
+    console.log(sortedChars, "==", word);
 
     if (anagramGroups.has(sortedChars)) {
-      console.log(word, "word");
+      console.log(word, "get");
       anagramGroups.get(sortedChars).push(word);
     } else {
+      console.log(word, "set");
       anagramGroups.set(sortedChars, [word]);
     }
   }
